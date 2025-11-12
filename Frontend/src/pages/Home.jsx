@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from '../Components/Hero/Hero'
-import Programs from '../Components/Programs/Programs'
 import Title from '../Components/Title/Title'
 import About from '../Components/About/About'
 import Middle from '../Components/Middle/Middle'
@@ -18,7 +17,6 @@ const Home = ({ onAddToCart }) => {
           subTitle='Fresh ingredients, made-to-order burgers, and a place where everyone feels welcome'
         />
       </section>
-      <Programs />
       <section id="about" style={{ background: 'var(--lighter-bg)', padding: '2rem 0' }}>
         <div className="container">
           <About />
