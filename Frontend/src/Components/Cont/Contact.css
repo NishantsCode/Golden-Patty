@@ -1,0 +1,233 @@
+.contact-section {
+    background: var(--lighter-bg);
+    padding: 2rem 0;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 3rem 0 6rem;
+}
+
+.contact-col h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-col h3 img {
+    width: 35px;
+    height: 35px;
+}
+
+.contact-col > p {
+    color: var(--light-gray);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(66, 34, 11, 0.15);
+}
+
+.info-card img {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: var(--cream);
+    border-radius: 8px;
+}
+
+.info-card h4 {
+    color: var(--dark-brown);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.info-card p {
+    color: var(--light-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.business-hours {
+    background: var(--dark-brown);
+    padding: 1.8rem;
+    border-radius: 12px;
+    color: var(--white);
+}
+
+.business-hours h4 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.hours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hours-grid > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.hours-grid > div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.day {
+    font-weight: 500;
+    color: var(--cream);
+}
+
+.time {
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.contact-col form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-col form label {
+    color: var(--dark-brown);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.contact-col form input,
+.contact-col form textarea {
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.contact-col form input:focus,
+.contact-col form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.contact-col form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btnSubmit {
+    background: var(--gold);
+    color: var(--dark-brown);
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btnSubmit:hover:not(:disabled) {
+    background: transparent;
+    color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.btnSubmit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.success-message {
+    color: #27ae60;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0.8rem;
+    background: #d4edda;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 968px) {
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 0 4rem;
+    }
+
+    .contact-info-cards {
+        gap: 1rem;
+    }
+
+    .info-card {
+        padding: 1.2rem;
+    }
+
+    .contact-col form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-col h3 {
+        font-size: 1.5rem;
+    }
+
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hours-grid > div {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,185 @@
+.banner {
+    background: var(--dark-brown);
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.banner-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.banner-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.banner-text .highlight {
+    color: var(--gold);
+}
+
+.banner-text .subheading {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.banner-text .description {
+    color: var(--cream);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.order-button {
+    background: var(--gold);
+    color: var(--dark-brown);
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.order-button:hover {
+    background: transparent;
+    color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.banner-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(255, 215, 0, 0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.offer-tag {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background: var(--gold);
+    color: var(--dark-brown);
+    padding: 1.5rem;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.offer-tag .discount {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.home-delivery {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: var(--white);
+    color: var(--dark-brown);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.home-delivery span:first-child {
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 968px) {
+    .banner-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .banner-text {
+        text-align: center;
+    }
+
+    .banner-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-image img {
+        max-width: 400px;
+    }
+
+    .offer-tag {
+        width: 100px;
+        height: 100px;
+        padding: 1rem;
+    }
+
+    .offer-tag .discount {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 3rem 0;
+    }
+
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner-image img {
+        max-width: 300px;
+    }
+}
