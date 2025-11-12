@@ -24,7 +24,7 @@ const Cart = ({ cartItems, onRemoveFromCart, onUpdateQuantity, isOpen, onClose, 
     e.preventDefault();
     
     try {
-      const response = await fetch('https://golden-patty-backend.onrender.com/', {
+      const response = await fetch('https://golden-patty-h83y.vercel.app/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
