@@ -1,16 +1,175 @@
-# React + Vite
+# 🍔 Burger Shop Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully-functional burger restaurant website with cart system, order management, and beautiful UI.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🎨 Modern Design
+- Clean, professional UI with Dark Brown, Gold, and Cream color palette
+- Responsive design (mobile, tablet, desktop)
+- Smooth animations and transitions
+- Consistent backgrounds throughout
 
-## React Compiler
+### 🛒 Shopping Cart
+- Add/remove items
+- Quantity management
+- Cart icon with item count
+- Checkout with customer details
+- Green success message on order
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📦 Order Management
+- Separate "My Orders" page
+- Order history with details
+- Status tracking (Pending, Preparing, Delivered)
+- Order numbers and timestamps
 
-## Expanding the ESLint configuration
+### 🖼️ Gallery
+- Interactive image gallery
+- Lightbox view for images
+- Restaurant atmosphere showcase
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+### 📱 Responsive
+- Mobile-first design
+- Hamburger menu
+- Touch-friendly
+- Works on all devices
+
+## 🚀 Quick Start
+
+### 1. Start Backend
+```bash
+cd Backend
+npm install
+npm start
+```
+Backend runs on: `http://localhost:5000`
+
+### 2. Start Frontend (New Terminal)
+```bash
+cd Frontend
+npm install
+npm run dev
+```
+Frontend runs on: `http://localhost:5173`
+
+### 3. Clear Old Data (If Needed)
+Open browser console (F12) and run:
+```javascript
+localStorage.removeItem('myOrders')
+```
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── pages/
+│   │   ├── Home.jsx              # Home page
+│   │   └── MyOrdersPage.jsx      # Orders page
+│   ├── Components/
+│   │   ├── Navbar/               # Navigation
+│   │   ├── Hero/                 # Hero section
+│   │   ├── Menu/                 # Menu with items
+│   │   ├── Cart/                 # Shopping cart
+│   │   ├── CartIcon/             # Cart icon
+│   │   ├── MyOrders/             # Order history
+│   │   ├── About/                # About section
+│   │   ├── Middle/               # Gallery
+│   │   ├── Programs/             # Burger showcase
+│   │   ├── Promotion/            # Promotions
+│   │   ├── Cont/                 # Contact
+│   │   └── Footer/               # Footer
+│   ├── assets/                   # Images
+│   ├── App.jsx                   # Main app with routing
+│   └── index.css                 # Global styles
+│
+└── Backend/
+    ├── server.js                 # Express server
+    └── package.json              # Backend dependencies
+```
+
+## 🎯 Pages
+
+### Home (`/`)
+- Hero section
+- Menu with "Add to Cart"
+- About section
+- Gallery
+- Promotions
+- Contact form
+
+### My Orders (`/my-orders`)
+- Order history
+- Order details
+- Status tracking
+- Customer information
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React 19
+- React Router DOM
+- Vite
+- CSS3
+
+### Backend
+- Node.js
+- Express.js
+- CORS
+
+## 📝 Usage
+
+### Browse & Order
+1. Browse menu items
+2. Click "Add to Cart" on any burger
+3. View cart (click cart icon)
+4. Proceed to checkout
+5. Fill in delivery details
+6. Place order
+7. See green success message
+
+### View Orders
+1. Click "My Orders" in navbar
+2. View all past orders
+3. See order details and status
+
+## 🎨 Color Palette
+
+- **Dark Brown**: `#42220b` - Primary dark
+- **Light Gray**: `#1c1c1c` - Text
+- **Gold**: `#FFD700` - Accents & CTAs
+- **Cream**: `#f5f5f0` - Backgrounds
+- **White**: `#ffffff` - Cards
+
+## 🔧 Configuration
+
+### Backend Port
+Default: `5000`
+Change in: `Backend/server.js`
+
+### Frontend Port
+Default: `5173` (Vite default)
+Change in: `vite.config.js`
+
+## 📱 Responsive Breakpoints
+
+- Mobile: `< 480px`
+- Tablet: `481px - 768px`
+- Desktop: `> 768px`
+
+
+### Orders not showing
+Clear localStorage:
+```javascript
+localStorage.removeItem('myOrders')
+```
+
+## 🤝 Contributing
+
+Feel free to fork, modify, and use this project for your own burger shop or restaurant website!
+
+---
+
+Made with ❤️ and 🍔
+
+Enjoy your burger shop website! 🎉
